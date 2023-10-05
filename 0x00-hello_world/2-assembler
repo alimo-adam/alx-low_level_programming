@@ -1,0 +1,5 @@
+#!/bin/bash
+# 2-assembler
+
+gcc -S "$CFILE" -o "${CFILE%.c}.s"
+
