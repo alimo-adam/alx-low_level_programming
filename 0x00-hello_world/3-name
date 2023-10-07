@@ -1,9 +1,2 @@
 #!/bin/bash
-# Ensure the C file is passed as an argument
-if [ "$CFILE" == "" ]; then
-    echo "Please set the CFILE variable"
-    exit 1
-fi
-# Compile the C file and name the output cisfun
-gcc "$CFILE" -o cisfun
-
+gcc "${CFILE:-main.c}" -o cisfun
