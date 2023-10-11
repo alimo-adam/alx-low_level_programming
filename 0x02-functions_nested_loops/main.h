@@ -1,7 +1,7 @@
-#include <stdio.h>
+#ifndef MAIN_H
+#define MAIN_H
 
-int main(void)
-{
-    printf("_putchar\n");
-    return (0);
-}
+int add(int, int);
+void print_to_98(int n);
+
+#endif /* MAIN_H */
