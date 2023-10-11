@@ -27,7 +27,7 @@ _putchar(product % 10 + '0');
 if (column == 9)
 _putchar('\n');
 else
-_putchar('');
+_putchar(' ');
 }
 }
 }
