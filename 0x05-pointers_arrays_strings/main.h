@@ -37,6 +37,8 @@ char *_strcpy(char *dest, char *src);
 
 int _putchar(char c);
 
+char *_strcpy(char *dest, char *src);
+
 
 /* Add other function prototypes here as needed */
 /* If you use custom functions like _putchar, include their prototypes here too */
