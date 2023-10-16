@@ -2,23 +2,25 @@
 #include <stdio.h>
 
 /**
- * print_array - prints n elements of an array of integers.
- * @a: the array to print.
- * @n: the number of elements of the array to be printed.
+ * print_array - Prints n elements of an array of integers.
+ * @a: The array of integers.
+ * @n: The number of elements to be printed.
  *
- * Return: nothing.
+ * Return: void
  */
 void print_array(int *a, int n)
 {
-for (int i = 0; i < n; i++)
-{
-printf("%d", a[i]);
+    int i;
 
-if (i < n - 1)
-{
-printf(", ");
-}
-}
+    for (i = 0; i < n; i++)
+    {
+        printf("%d", a[i]);
 
-printf("\n");
+        /* Check if the current element is the last one to be printed */
+        if (i < n - 1)
+        {
+            printf(", ");
+        }
+    }
+    printf("\n");
 }
