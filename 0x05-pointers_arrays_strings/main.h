@@ -35,6 +35,9 @@ void print_array(int *a, int n);
 /* Task 9 */
 char *_strcpy(char *dest, char *src);
 
+int _putchar(char c);
+
+
 /* Add other function prototypes here as needed */
 /* If you use custom functions like _putchar, include their prototypes here too */
 
