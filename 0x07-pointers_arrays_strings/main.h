@@ -22,4 +22,6 @@ void print_diagsums(int *a, int size);
 /* Function to print character */
 int _putchar(char c);
 
+char *_strchr(char *s, char c);
+
 #endif /* MAIN_H */
