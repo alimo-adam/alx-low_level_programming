@@ -5,7 +5,7 @@
  * @s: the string to be searched
  * @c: the character to look for
  * 
- * Return: pointer to the first occurrence of the character c in s,
+ * Return: pointer to the first occurrence of the character c in the string s,
  * or NULL if the character is not found
  */
 char *_strchr(char *s, char c)
@@ -13,17 +13,12 @@ char *_strchr(char *s, char c)
     while (*s)
     {
         if (*s == c)
-        {
-            return s;
-        }
+            return (s);
         s++;
     }
 
-    /* check if c is the null terminator */
-    if (*s == c)
-    {
-        return s;
-    }
+    if (c == '\0')  // check for the null terminator, as it could be a valid character to find
+        return (s);
 
-    return NULL;
+    return (NULL);
 }
