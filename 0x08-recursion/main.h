@@ -30,4 +30,8 @@ int is_prime_number(int n);
 /* Function to check if a string is a palindrome */
 int is_palindrome(char *s);
 
+/* Function to compare two strings */
+int wildcmp(char *s1, char *s2);
+
+
 #endif /* MAIN_H */
