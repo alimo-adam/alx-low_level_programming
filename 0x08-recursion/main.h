@@ -12,4 +12,7 @@ void _puts_recursion(char *s);
 /* Function to print string in reverse using recursion */
 void _print_rev_recursion(char *s);
 
+/* Function to return the length of a string using recursion */
+int _strlen_recursion(char *s);
+
 #endif /* MAIN_H */
