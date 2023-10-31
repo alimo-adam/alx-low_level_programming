@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "main.h"
 #include <stdlib.h>
 
@@ -45,4 +46,6 @@ char *create_array(unsigned int size, char c)
 
     return array;
 }
+=======
+>>>>>>> 148f9196fb69b0bc0757fc866bef72fcba56c171
 

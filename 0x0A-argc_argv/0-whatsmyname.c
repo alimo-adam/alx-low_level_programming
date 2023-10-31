@@ -1,14 +1,28 @@
-#include <stdio.h>
+#include "main.h"
+#include <stdlib.h>
 
 /**
- * main - Entry point, prints the name of the program
- * @argc: The number of command line arguments
- * @argv: Array containing the program command line arguments
- * Return: 0 - success
+ * create_array - creates an array of chars,
+ *                and initializes it with a specific char.
+ * @size: the size of the array
+ * @c: the character to initialize the array with
+ *
+ * Return: a pointer to the array, or NULL if it fails
  */
-int main(int argc, char *argv[])
+char *create_array(unsigned int size, char c)
 {
-	if (argc > 0)
-		printf("%s\n", argv[0]);
-	return (0);
+    unsigned int i;
+    char *array;
+
+    if (size == 0)
+        return (NULL);
+
+    array = malloc(size * sizeof(char));
+    if (array == NULL)
+        return (NULL);
+
+    for (i = 0; i < size; i++)
+        array[i] = c;
+
+    return (array);
 }
