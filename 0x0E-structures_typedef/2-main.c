@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * main - Entry point
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
@@ -13,8 +13,8 @@ int main(void)
     my_dog.name = "Poppy";
     my_dog.age = 3.5;
     my_dog.owner = "Bob";
+
     print_dog(&my_dog);
 
     return (0);
 }
-
