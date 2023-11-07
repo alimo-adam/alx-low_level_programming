@@ -1,7 +1,5 @@
 #include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * new_dog - Creates a new dog
@@ -14,27 +12,42 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
     dog_t *new_dog;
-    char *name_copy, *owner_copy;
+    int i, name_len, owner_len;
 
+    /* Calculate the lengths of the name and owner strings */
+    for (name_len = 0; name[name_len]; name_len++)
+        ;
+    for (owner_len = 0; owner[owner_len]; owner_len++)
+        ;
+
+    /* Allocate memory for the dog structure */
     new_dog = malloc(sizeof(dog_t));
     if (new_dog == NULL)
         return (NULL);
 
-    name_copy = strdup(name);
-    owner_copy = strdup(owner);
+    /* Allocate memory for the name and owner strings */
+    new_dog->name = malloc(name_len + 1);
+    new_dog->owner = malloc(owner_len + 1);
 
-    if (name_copy == NULL || owner_copy == NULL)
+    /* Check for allocation failure */
+    if (new_dog->name == NULL || new_dog->owner == NULL)
     {
-        free(name_copy);
-        free(owner_copy);
+        free(new_dog->name);
+        free(new_dog->owner);
         free(new_dog);
         return (NULL);
     }
 
-    new_dog->name = name_copy;
+    /* Copy the name and owner strings */
+    for (i = 0; i < name_len; i++)
+        new_dog->name[i] = name[i];
+    new_dog->name[i] = '\0';
+
+    for (i = 0; i < owner_len; i++)
+        new_dog->owner[i] = owner[i];
+    new_dog->owner[i] = '\0';
+
     new_dog->age = age;
-    new_dog->owner = owner_copy;
 
     return (new_dog);
 }
-
