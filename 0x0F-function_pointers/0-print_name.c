@@ -3,10 +3,12 @@
 
 /**
  * print_name - prints a name
- * @name: name to print
- * @f: function pointer to the printing function
+ * @name: The name to be printed
+ * @f: Function pointer to a printing function
  *
- * Return: Nothing.
+ * Description: This function takes a name and a function pointer.
+ * It checks if the name and the function pointer are not NULL and
+ * calls the function to print the name.
  */
 void print_name(char *name, void (*f)(char *))
 {
@@ -15,4 +17,3 @@ void print_name(char *name, void (*f)(char *))
         f(name);
     }
 }
-
