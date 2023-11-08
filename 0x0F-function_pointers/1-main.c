@@ -17,9 +17,9 @@ void print_elem_hex(int elem)
 printf("0x%x\n", elem);
 }
 /**
-* main - check the code
+* main - Entry point
 *
-* Return: Always 0.
+* Return: Always 0
 */
 int main(void)
 {
