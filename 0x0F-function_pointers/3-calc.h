@@ -1,8 +1,9 @@
-#ifndef _3_CALC_H
-#define _3_CALC_H
+#ifndef CALC_H
+#define CALC_H
 
 /**
  * struct op - Struct op
+ *
  * @op: The operator
  * @f: The function associated
  */
@@ -18,5 +19,4 @@ int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
 
-#endif /* _3_CALC_H */
-
+#endif /* CALC_H */
