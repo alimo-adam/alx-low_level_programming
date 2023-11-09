@@ -1,12 +1,12 @@
+#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "3-calc.h"
 
 /**
- * main - entry point
- * @argc: number of command-line arguments
- * @argv: array of command-line arguments
- * Return: 0 on success, error code on failure
+ * main - performs simple operations
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: 0 on success, exit with status 98, 99, or 100 on failure
  */
 int main(int argc, char *argv[])
 {
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     num2 = atoi(argv[3]);
     operation = get_op_func(argv[2]);
 
-    if (!operation)
+    if (operation == NULL)
     {
         printf("Error\n");
         exit(99);
