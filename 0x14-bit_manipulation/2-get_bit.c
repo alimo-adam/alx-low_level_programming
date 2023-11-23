@@ -1,21 +1,22 @@
-#include <stdio.h>
-#include "holberton.h"
-#include <math.h>
+#include "main.h"
+
 /**
- * get_bit - Write a function that returns the value of a bit at a
- * given index.
- * Prototype: int get_bit(unsigned long int n, unsigned int index);
- * @index: is the index, starting from 0 of the bit you want to get
- * @n: bit value in the index.
- * Return: the value of the bit at index index or -1 if an error occured
+ * print_binary - prints the binary representation
+ * of a number.
+ * @n: unsigned long int.
+ *
+ * Return: no return.
  */
-int get_bit(unsigned long int n, unsigned int index)
+void print_binary(unsigned long int n)
 {
-	if (index > 63)
-		return (-1);
-	if (index == 0)
+	if (n >> 0)
 	{
-		return (n & 1);
+		if (n >> 1)
+			print_binary(n >> 1);
+		_putchar((n & 1) + '0');
 	}
-	return (get_bit(n >> 1, index - 1));
+	else
+	{
+		_putchar('0');
+	}
 }
